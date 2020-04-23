@@ -29,8 +29,6 @@ set incsearch
 " 自动折行
 set wrap
 " noremap s <nop>
-map W :w<cr>
-map Q :x<cr> 
 let mapleader=" "
 map R :source ~/.vimrc<CR>
 map <LEADER>cc :e ~/.vimrc<CR>
@@ -49,16 +47,22 @@ set scrolloff=5
 
 " FZF插件配置
 noremap <C-p> :FZF<CR>
+noremap <C-f> :Ag<CR>
+
 " NERDTree插件配置
-noremap <F1> :NERDTreeToggle<CR>
+" 默认打开NERDTree
+" autocmd vimenter * NERDTree
+noremap <F2> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+" 默认打开收藏夹
 let g:NERDTreeShowBookmarks='1'
+
 " Resize splits with arrow keys
-noremap <up> :res +5<CR>
-noremap <down> :res -5<CR>
-noremap <left> :vertical resize-5<CR>
-noremap <right> :vertical resize+5<CR>
+noremap <C-up> :res +5<CR>
+noremap <C-down> :res -5<CR>
+noremap <C-left> :vertical resize-5<CR>
+noremap <C-right> :vertical resize+5<CR>
 
 " ===
 " === xtabline
@@ -70,12 +74,19 @@ let g:xtabline_settings.enable_persistance = 0
 let g:xtabline_settings.last_open_first = 1
 noremap to :XTabCycleMode<CR>
 noremap \p :XTabInfo<CR>
+
+" develop-enhance
+nmap <F8> :TagbarToggle<CR>
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'connorholyday/vim-snazzy'
 Plug 'mg979/vim-xtabline'
+
+" develop-enhance
+Plug 'majutsushi/tagbar'
 
 " git
 Plug 'rhysd/conflict-marker.vim'
@@ -97,6 +108,7 @@ Plug 'pangloss/vim-javascript', { 'for' :['javascript', 'vim-plug'] }
 Plug 'mattn/emmet-vim'
 
 " Markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
 Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
 Plug 'vimwiki/vimwiki'
 call plug#end()
