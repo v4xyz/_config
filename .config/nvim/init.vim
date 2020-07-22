@@ -30,7 +30,7 @@ set incsearch
 set wrap
 " noremap s <nop>
 let mapleader=" "
-map R :source ~/.vimrc<CR>
+map R :source ~/.config/nvim/init.vim<CR>
 map <LEADER>cc :e ~/.vimrc<CR>
 map <LEADER>cv :e ~/.config/nvim/init.vim<CR>
 set background=dark
@@ -75,6 +75,7 @@ Plug 'connorholyday/vim-snazzy'
 
 " develop-enhance
 Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-surround'
 
 " git
 Plug 'rhysd/conflict-marker.vim'
@@ -93,6 +94,7 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'gko/vim-coloresque', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
 Plug 'pangloss/vim-javascript', { 'for' :['javascript', 'vim-plug'] }
 Plug 'mattn/emmet-vim'
+Plug 'kkoomen/vim-doge'
 
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
