@@ -31,7 +31,7 @@ set wrap
 " noremap s <nop>
 let mapleader=" "
 map R :source ~/.config/nvim/init.vim<CR>
-map <LEADER>cc :e ~/.vimrc<CR>
+map <LEADER>cc :e ~/.config/nvim/coc-settings.json<CR>
 map <LEADER>cv :e ~/.config/nvim/init.vim<CR>
 set background=dark
 inoremap jk <esc>
@@ -76,6 +76,7 @@ Plug 'connorholyday/vim-snazzy'
 " develop-enhance
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-surround'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " git
 Plug 'rhysd/conflict-marker.vim'
@@ -87,6 +88,7 @@ Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " HTML, CSS, JavaScript, PHP, JSON, etc.
 Plug 'elzr/vim-json'
@@ -94,6 +96,7 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'gko/vim-coloresque', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
 Plug 'pangloss/vim-javascript', { 'for' :['javascript', 'vim-plug'] }
 Plug 'mattn/emmet-vim'
+" 代码注释
 Plug 'kkoomen/vim-doge'
 
 " Markdown
