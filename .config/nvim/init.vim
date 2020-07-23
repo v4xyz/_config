@@ -58,6 +58,9 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " 默认打开收藏夹
 let g:NERDTreeShowBookmarks='1'
 
+" coc 插件配置
+let g:coc_node_path='/usr/local/bin/node'
+
 " Resize splits with arrow keys
 noremap <C-up> :res +5<CR>
 noremap <C-down> :res -5<CR>
@@ -77,6 +80,7 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 
 " git
 Plug 'rhysd/conflict-marker.vim'
